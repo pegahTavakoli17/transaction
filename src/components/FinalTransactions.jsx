@@ -13,14 +13,17 @@ export default function FinalTransactions({ transactions }) {
       <Divider className=" w-100" style={{ backgroundColor: "#180883" }} />
 
       <div className="d-flex mt-2">
+        {/* income amount */}
         <span className="col-4">
           {Number(transactions.income_sum).toLocaleString()}
           ریال
         </span>
+        {/* expence amount */}
         <span className="col-4">
           {Number(transactions.expense_sum).toLocaleString()}
           ریال
         </span>
+        {/* deff of expence and income */}
         <span
           className={`${
             transactions.diff > 0 ? "text-success" : "text-danger"
