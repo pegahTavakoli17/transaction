@@ -54,6 +54,7 @@ export default function TransactionsList() {
   return (
     <div className="custom-page w-100 d-flex flex-column align-items-center">
       <div className="d-flex w-90  text-center mx-auto">
+        {/* get today transactions */}
         <button
           onClick={handleTodayType}
           className={`${
@@ -62,7 +63,7 @@ export default function TransactionsList() {
         >
           امروز
         </button>
-
+        {/* get tranasctions of lspecial days */}
         <button
           onClick={handleSpecialDates}
           className={`${
@@ -72,6 +73,7 @@ export default function TransactionsList() {
           بازه خاص
         </button>
       </div>
+      {/* box for select special days */}
       {selectedType == "specialDays" && (
         <div className="mt-3">
           <div className="d-flex ">
@@ -109,8 +111,11 @@ export default function TransactionsList() {
           </button>
         </div>
       )}
+      {/* show transactions */}
       {transactions.diff && <FinalTransactions transactions={transactions} />}
+      {/* button for navigate new transaction */}
       <NewTransactionBtn />
+      {/* loading */}
       {loading && (
         <PulseLoader
           color="#180883"
