@@ -74,7 +74,9 @@ export default function NewTransaction() {
           برداشت جدید
         </button>
       </div>
+
       <div className="d-flex flex-column align-items-center mt-4">
+        {/* select date */}
         <div className="d-flex justify-content-between w-100">
           <span className="text-dark-blue col-5">
             <i className="bi bi-calendar2-event text-dark-blue  ml-1"></i>
@@ -84,6 +86,7 @@ export default function NewTransaction() {
             <PersianDatePicker onDateSelect={handleSelectedDate} />
           </div>
         </div>
+        {/* amount */}
         <div className="d-flex w-100 justify-content-between mt-4">
           <span className="text-dark-blue col-5">
             <i className="bi bi-cash text-dark-blue  ml-1"></i>
@@ -96,6 +99,7 @@ export default function NewTransaction() {
             onChange={handlePrice}
           />
         </div>
+        {/* category */}
         <div className="d-flex w-100 justify-content-between mt-4">
           <span className="text-dark-blue col-5">
             <i className="bi bi-bookmark text-dark-blue  ml-1"></i>
@@ -109,6 +113,7 @@ export default function NewTransaction() {
             value={category}
           />
         </div>
+        {/* description */}
         <div className="d-flex w-100 justify-content-between mt-4">
           <span className="text-dark-blue col-5">
             <i className="bi bi-file-text text-dark-blue  ml-1"></i>
@@ -122,6 +127,7 @@ export default function NewTransaction() {
           ></textarea>
         </div>
       </div>
+      {/* save changes */}
       <div className="d-flex justify-content-center">
         <button
           className={`${isFormValid ? "dark-blue-btn" : "grey-btn"}  mt-5`}
